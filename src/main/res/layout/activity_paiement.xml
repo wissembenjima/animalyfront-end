@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.PaiementActivity"
+    android:orientation="vertical"
+    android:padding="20dp"
+
+    >
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_baseline_close_24"
+        android:background="@android:color/transparent"
+        android:layout_gravity="start"
+
+        android:contentDescription="@string/close"
+        android:layout_weight="1"
+
+        android:id="@+id/close_btn"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/bebasneue_regular"
+        android:textSize="35sp"
+        android:textAllCaps="true"
+        android:text="@string/config_paiement"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/noir"
+        android:layout_weight="1"
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:textSize="13sp"
+            android:textColor="@color/vert"
+            android:text="@string/num_carte"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/num_carte_et"
+            android:background="@drawable/rounded_edittext"
+            android:hint="@string/xxxx"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+
+            android:inputType="number"
+            android:digits="0123456789-"
+            android:importantForAutofill="no"
+
+
+            />
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="13sp"
+                android:textColor="@color/vert"
+                android:text="@string/date_exp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="13sp"
+                android:textColor="@color/vert"
+                android:text="@string/cvv"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:textStyle="bold"
+                />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="40dp"
+                android:id="@+id/date_exp_et"
+                android:background="@drawable/rounded_edittext"
+                android:hint="@string/mm_yy"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginEnd="10dp"
+                android:inputType="date"
+                android:importantForAutofill="no" />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="40dp"
+                android:id="@+id/cvv_et"
+                android:background="@drawable/rounded_edittext"
+                android:hint="@string/xxx"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginStart="10dp"
+
+                android:inputType="numberPassword"
+                android:importantForAutofill="no" />
+
+        </GridLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:layout_marginTop="50dp"
+            android:text="@string/ajouter_carte"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+
+            android:id="@+id/ajouter_carte_btn"
+
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:text="@string/paiement_livraison"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+
+            android:id="@+id/pai_liv_btn"
+
+            />
+
+    </LinearLayout>
+</LinearLayout>
